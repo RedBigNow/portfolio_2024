@@ -1,0 +1,12 @@
+:root {
+  --font-family: 'RobotoMono', sans-serif;
+  --font-family-title: 'Main', sans-serif;
+  --white: #ffffff;
+  --black: #171719;
+  --gray: #1E1E20;
+  --overlay-dark: rgb(0 0 0 / 70%);
+  --index: calc(1vw + 1vh);
+  --rem: calc(var(--index) * 0.6);
+  --rem-tablet: calc(var(--index) * 1.25);
+  --rem-phone: calc(var(--index) * 1.5);
+}

@@ -1,0 +1,22 @@
+// Переменные, миксины, функции
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "helpers/_functions";
+
+// CSS-файлы библиотек
+@import "vendor/_libs";
+
+// Элементы дизайн системы
+@import "base/_desing-system";
+
+// Основное
+@import "base/_fonts";
+@import "base/_general";
+@import "base/_editor-content";
+@import "base/animation";
+
+// Компоненты
+@import "../../blocks/components/_components";
+
+// БЭМ-блоки
+@import "../../blocks/modules/_modules";

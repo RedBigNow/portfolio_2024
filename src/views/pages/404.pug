@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block variables
+  - const title = "404";
+
+block content
+  include ../../blocks/modules/header/header
+  .content
+    include ../../blocks/modules/page-404/page-404
+  include ../../blocks/modules/footer/footer
+
+block scripts
+  script(src="assets/js/vendor.js")
+  script(src="assets/js/main.js")

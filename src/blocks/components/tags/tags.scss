@@ -1,0 +1,29 @@
+.tags {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 16px 16px 0;
+    border: 1px solid var(--white);
+    border-radius: 42px;
+    padding: 10px 16px 8px;
+    color: var(--white);
+    font-family: var(--font-family-title);
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__list--small &__item {
+    margin: 0 12px 12px 0;
+    font-size: 12px;
+  }
+
+  &__list--black &__item {
+    color: var(--black);
+    border: 1px solid var(--black);
+  }
+}

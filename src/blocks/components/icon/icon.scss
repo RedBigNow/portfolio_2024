@@ -1,0 +1,20 @@
+.icon-left {
+  margin-right: 4px;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+.icon-right {
+  margin-left: 4px;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+.icon-arrow-right {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  vertical-align: middle;
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6569 8.34326L5.65686 1.41506V15.2715L17.6569 8.34326ZM1.65686 9.54326H6.85686V7.14326H1.65686V9.54326Z' fill='%23171719'/%3E%3C/svg%3E%0A");
+}

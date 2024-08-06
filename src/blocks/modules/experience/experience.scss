@@ -1,0 +1,62 @@
+.experience {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+  }
+
+  &__col {
+    display: flex;
+    flex-flow: column;
+    width: 48%;
+    margin: 0 1%;
+  }
+
+  &__info {
+    flex: 1 0 auto;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    margin-top: 24px;
+    padding: 32px;
+    border-radius: 12px;
+    background: var(--gray);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: -40%;
+    bottom: -60%;
+    width: 850px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__dates {
+    margin-bottom: 4px;
+    font-family: var(--font-family-title);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__company {
+    margin-bottom: 8px;
+    font-family: var(--font-family-title);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    font-family: var(--font-family-title);
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #b9b9ba;
+  }
+}

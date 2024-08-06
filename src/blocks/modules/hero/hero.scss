@@ -1,0 +1,40 @@
+.hero {
+  padding: 0;
+
+  &__wrapper {
+    position: relative;
+    padding: 200px 0;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-family: var(--font-family-title);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 16px 0 24px;
+    font-size: 70px;
+    font-family: var(--font-family-title);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    padding-right: 40%;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 620px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
