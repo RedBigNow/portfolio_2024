@@ -1,9 +1,12 @@
 .hero {
-  padding: 0;
+  padding: 120px 0 0;
 
   &__wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     position: relative;
-    padding: 200px 0;
+    min-height: calc(100vh - 100px);
   }
 
   &__subtitle {
@@ -28,13 +31,27 @@
   &__img {
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: auto;
     right: 0;
     width: 620px;
+    margin-top: -50px;
 
     img {
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .hero {
+    &__wrapper {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      position: relative;
+      min-height: auto;
+      padding: 200px 0;
     }
   }
 }

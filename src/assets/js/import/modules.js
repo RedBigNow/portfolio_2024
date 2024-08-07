@@ -1,2 +1,6 @@
 import '%modules%/header/header'
+import '%modules%/experience/experience'
+import '%modules%/stack/stack'
+import '%modules%/cases/cases'
+import '%modules%/activity/activity'
 import '%modules%/footer/footer'

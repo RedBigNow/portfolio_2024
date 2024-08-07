@@ -26,4 +26,16 @@
     color: var(--black);
     border: 1px solid var(--black);
   }
+
+  &__list--fill &__item {
+    color: var(--black);
+    border: 1px solid var(--white);
+    background: var(--white);
+  }
+
+  &__list--fill-black &__item {
+    color: var(--white);
+    border: 1px solid var(--black);
+    background: var(--black);
+  }
 }

@@ -125,6 +125,10 @@ h6 {
 .section-title {
   margin: 0 0 48px;
   font-size: 42px;
+
+  &--black {
+    color: var(--black);
+  }
 }
 
 
@@ -280,15 +284,6 @@ section {
   border-radius: 12px;
   background: var(--gray);
   color: var(--white);
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 
   > *:first-child {
     margin-top: 0;

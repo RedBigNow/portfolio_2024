@@ -1,30 +1,68 @@
 .header {
   flex: 0 0 auto;
-  position: relative;
+  position: fixed;
   z-index: 99999;
+  top: 0;
   width: 100%;
   margin: 24px 0;
   transition: 0.3s ease;
+
+  &--sticky {
+    transform: translateY(0);
+  }
+
+  &--sticky &__wrapper {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    background: rgb(30 30 32 / 80%);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+  }
+
+  &--out {
+    transform: translateY(calc(-100% - 48px));
+  }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
+    width: 100%;
     padding: 24px 40px;
     border-radius: 12px;
     background: var(--gray);
+    transition: 0.3s;
   }
 
   &__logo-link {
-    display: block;
-    width: 100%;
+    display: flex;
+    width: 60px;
     height: 100%;
     font-size: 24px;
     font-family: var(--font-family-title);
     font-weight: 900;
     line-height: 1;
+    text-transform: uppercase;
     text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  &__logo-full {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  &__logo-link:hover &__logo-full {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+
+    &:first-child {
+      padding-right: calc(100% + 50px);
+    }
   }
 
   &__nav {

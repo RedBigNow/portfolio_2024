@@ -1,0 +1,63 @@
+.activity {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+    padding-bottom: 24px;
+  }
+
+  &__col {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 48%;
+    overflow: hidden;
+    margin: 0 1%;
+  }
+
+  &__info {
+    margin: 0 0 24px;
+    padding: 32px;
+    border-radius: 12px;
+    background: var(--gray);
+    color: var(--white);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 24px;
+  }
+
+  &__img {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+    width: 85%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: -350px;
+    bottom: -550px;
+    width: 1000px;
+    height: 1000px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

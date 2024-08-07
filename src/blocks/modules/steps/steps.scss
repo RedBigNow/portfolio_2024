@@ -1,0 +1,30 @@
+.steps {
+  padding: 200px 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+  }
+
+  &__item {
+    width: 48%;
+    min-height: 180px;
+    margin: 0 1% 24px;
+    padding: 32px;
+    border-radius: 12px;
+    background: var(--gray);
+  }
+
+  &__item-title {
+    margin: 0 0 16px;
+    font-family: var(--font-family-title);
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__item-desc {
+    font-size: 16px;
+  }
+}
