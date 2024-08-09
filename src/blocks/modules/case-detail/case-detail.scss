@@ -1,0 +1,163 @@
+.case-detail {
+  overflow: visible;
+  padding-top: 120px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__content {
+    width: 67%;
+    padding-right: 120px;
+  }
+
+  &__banner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    background: var(--gray);
+    overflow: hidden;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 9;
+    height: 400px;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 25%;
+    right: -45%;
+    width: 1400px;
+    transform: rotate(250deg);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__block {
+    padding-top: 120px;
+  }
+
+  &__block-title {
+    margin-top: 0;
+  }
+
+  &__block-desc {
+    li {
+      font-size: 18px;
+    }
+  }
+
+  &__sidebar {
+    width: 33%;
+    padding: 32px;
+    border-radius: 10px;
+    background: var(--gray);
+    will-change: transform;
+  }
+
+  &__sidebar-item {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sidebar-title {
+    margin-bottom: 12px;
+    font-family: var(--font-family-title);
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #b9b9ba;
+  }
+
+  &__sidebar-text {
+    margin-top: -4px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__sidebar-btn {
+    margin-top: 52px;
+
+    .btn {
+      display: block;
+    }
+  }
+}
+
+@include for-size(desktopSM) {
+  .case-detail {
+    padding-top: 100px;
+
+    &__content {
+      padding-right: 40px;
+    }
+
+    &__block {
+      padding-top: 80px;
+    }
+  }
+}
+
+@include for-size(tablet) {
+  .case-detail {
+    &__content {
+      order: 2;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    &__sidebar {
+      order: 1;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include for-size(phone) {
+  .case-detail {
+    padding-top: 60px;
+
+    &__banner {
+      padding: 12px;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__bg {
+      top: 35%;
+      right: -80%;
+      width: 900px;
+    }
+
+    &__block {
+      padding-top: 40px;
+    }
+  }
+}

@@ -33,3 +33,16 @@
     }
   }
 }
+
+@include for-size(tablet) {
+  .contacts {
+    &__list {
+      margin: 0;
+    }
+
+    &__item {
+      width: 100%;
+      margin: 0 0 24px;
+    }
+  }
+}

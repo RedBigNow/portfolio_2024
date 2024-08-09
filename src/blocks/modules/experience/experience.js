@@ -5,44 +5,44 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 const ItemsAnimate = document.querySelectorAll('.experience__info')
 
-let mm = gsap.matchMedia();
+let mm = gsap.matchMedia()
 
-if(ItemsAnimate) {
+mm.add('(min-width: 1200px)', () => {
 
-  ItemsAnimate.forEach((item, index) => {
-    mm.add('(max-width: 2000px)', () => {
+  if(ItemsAnimate) {
 
-      const triggerBottom = index === 0 ? '130' : '100';
+    ItemsAnimate.forEach((item, index) => {
+      mm.add('(max-width: 2000px)', () => {
 
-      gsap.fromTo(item, { opacity: 0, yPercent: 30}, {
-        opacity: 1,
-        yPercent: 0,
-        scrollTrigger: {
-          trigger: item,
-          pin: false,
-          start: 'top +=100%',
-          end: `bottom +=${triggerBottom}%`,
-          scrub: 1,
-          //markers: true
-        }
-      });
-  
-      /*gsap.fromTo('.experience__bg', { opacity: 0, yPercent: 30}, {
-        opacity: 1,
-        yPercent: 0,
-        duration: 2,
-        scrollTrigger: {
-          trigger: '.experience__row',
-          pin: false,
-          start: 'top +=70%',
-          end: 'bottom +=90%',
-          scrub: 1,
-          //markers: true
-        }
-      });*/
+        const triggerBottom = index === 0 ? '130' : '100'
 
-    });
+        gsap.fromTo(item, { opacity: 0, yPercent: 30}, {
+          opacity: 1,
+          yPercent: 0,
+          scrollTrigger: {
+            trigger: item,
+            pin: false,
+            start: 'top +=100%',
+            end: `bottom +=${triggerBottom}%`,
+            scrub: 1,
+            //markers: true
+          }
+        })
 
-  })  
-
-}
+        gsap.fromTo('.experience__bg', { opacity: 0, scale: 0.5 }, {
+          opacity: 1,
+          scale: 1,
+          force3D: false,
+          scrollTrigger: {
+            trigger: item.parentNode,
+            pin: false,
+            start: 'top +=80%',
+            end: 'bottom +=60%',
+            scrub: 1,
+            //markers: true
+          }
+        })
+      })
+    })  
+  }
+})

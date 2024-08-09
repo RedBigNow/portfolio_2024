@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Кейс";
+
+block content
+  include ../../blocks/modules/header/header
+  .content
+    .content-page
+      include ../../blocks/components/breadcrumbs/breadcrumbs
+      include ../../blocks/modules/case-detail/case-detail
+    include ../../blocks/modules/footer/footer
+
+block scripts
+  script(src="assets/js/vendor.js")
+  script(src="assets/js/main.js")

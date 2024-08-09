@@ -40,6 +40,26 @@
     }
   }
 
+  &--white-outline {
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+
+    i {
+      background-color: var(--white);
+    }
+
+    &:hover {
+      color: var(--black);
+      background-color: var(--white);
+      border: 1px solid var(--white);
+
+      i {
+        background-color: var(--black);
+      }
+    }
+  }
+
   &--black {
     color: var(--white);
     background-color: var(--black);

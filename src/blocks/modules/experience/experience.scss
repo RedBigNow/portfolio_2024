@@ -15,6 +15,7 @@
   &__info {
     flex: 1 0 auto;
     position: relative;
+    z-index: 9;
     height: auto;
     overflow: hidden;
     margin-top: 24px;
@@ -25,10 +26,19 @@
     &:first-child {
       margin-top: 0;
     }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__bg {
     position: absolute;
+    z-index: -1;
     right: -40%;
     bottom: -60%;
     width: 850px;
@@ -58,5 +68,34 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #b9b9ba;
+  }
+}
+
+@include for-size(tablet) {
+  .experience {
+    &__row {
+      margin: 0;
+    }
+
+    &__col {
+      width: 100%;
+      margin: 0 0 24px;
+    }
+
+    &__bg {
+      right: -45%;
+      bottom: -35%;
+      width: 700px;
+      opacity: 0.2;
+    }
+  }
+}
+
+@include for-size(phone) {
+  .experience {
+    &__bg {
+      right: -65%;
+      bottom: -350px;
+    }
   }
 }

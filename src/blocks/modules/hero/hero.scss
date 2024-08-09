@@ -1,5 +1,5 @@
 .hero {
-  padding: 120px 0 0;
+  padding: 0;
 
   &__wrapper {
     display: flex;
@@ -46,12 +46,59 @@
 @media screen and (min-width: 2000px) {
   .hero {
     &__wrapper {
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      position: relative;
       min-height: auto;
-      padding: 200px 0;
+      padding: 200px 0 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .hero {
+    &__img {
+      width: 500px;
+    }
+  }
+}
+
+@include for-size(tablet) {
+  .hero {
+    &__wrapper {
+      min-height: 75vh;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__img {
+      width: 400px;
+    }
+  }
+}
+
+@include for-size(phone) {
+  .hero {
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+      word-break: break-word;
+    }
+
+    &__tags {
+      padding-right: 0;
+    }
+
+    &__img {
+      right: -65%;
+      width: 400px;
+      opacity: 0.5;
     }
   }
 }

@@ -3,6 +3,7 @@ const { openMenu, closeMenu } = useMenu()
 
 const navbar = document.querySelector('.header__navbar')
 const burger = document.querySelector('.header__burger')
+const menuLinks = document.querySelectorAll('.header__menu-link')
 
 navbar.addEventListener('click', () => {
   if(burger.classList.contains('header__burger--active')) {
@@ -13,6 +14,11 @@ navbar.addEventListener('click', () => {
     burger.classList.add('header__burger--active')
   }
 })
+
+Array.from(menuLinks, item => item.addEventListener('click', () => {
+  closeMenu()
+  burger.classList.remove('header__burger--active')
+}))
 
 // Показывать/скрывать шапку при скролле
 let lastScroll = 0;

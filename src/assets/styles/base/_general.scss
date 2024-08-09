@@ -122,6 +122,33 @@ h6 {
   }
 }
 
+@include for-size(phone) {
+  
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+  
+  h5 {
+    font-size: 14px;
+  }
+  
+  h6 {
+    font-size: 12px;
+  }
+}
+
 .section-title {
   margin: 0 0 48px;
   font-size: 42px;
@@ -131,16 +158,17 @@ h6 {
   }
 }
 
-
 @include for-size(tablet) {
   .section-title {
-    font-size: 36px;
+    margin: 0 0 24px;
+    font-size: 24px;
   }
 }
 
-@include for-size(tablet) {
+@include for-size(phone) {
   .section-title {
-    font-size: 32px;
+    margin: 0 0 18px;
+    font-size: 22px;
   }
 }
 
@@ -197,9 +225,12 @@ section {
 
 .content-page {
   flex: 1 0 auto;
+  padding-top: 120px;
 }
 
 .content {
+  will-change: transform;
+
   &-row {
     display: flex;
     flex-flow: wrap;

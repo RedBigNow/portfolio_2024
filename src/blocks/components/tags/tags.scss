@@ -39,3 +39,16 @@
     background: var(--black);
   }
 }
+
+@include for-size(tablet) {
+  .tags {
+    &__item {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    &__list--small &__item {
+      font-size: 10px;
+    }
+  }
+}

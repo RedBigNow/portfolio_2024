@@ -28,3 +28,27 @@
     font-size: 16px;
   }
 }
+
+@include for-size(tablet) {
+  .steps {
+    padding: 100px 0;
+
+    &__item {
+      width: 100%;
+      min-height: auto;
+      margin: 0 0 24px;
+    }
+
+    &__item-title {
+      font-size: 18px;
+    }
+  }
+}
+
+@include for-size(phone) {
+  .steps {
+    &__item-title {
+      font-size: 16px;
+    }
+  }
+}
