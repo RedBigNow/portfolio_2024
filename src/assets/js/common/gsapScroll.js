@@ -8,7 +8,7 @@ let mm = gsap.matchMedia();
 
 mm.add('(min-width: 1200px)', () => {
 
-  let smoother = ScrollSmoother.create({
+  const smoother = ScrollSmoother.create({
     wrapper: '.wrapper',
     content: '.content',
     smooth: 1.2
@@ -16,27 +16,40 @@ mm.add('(min-width: 1200px)', () => {
 
   gsap.utils.toArray('.header__menu-link').forEach(function (button, i) {
     button.addEventListener('click', (e) => {
-      var id = e.target.getAttribute('href');
-      smoother.scrollTo(id, true, 'top top');
       e.preventDefault();
+      let id = e.target.getAttribute('href').split('#')[1];
+      let link = e.target.getAttribute('href').split('#')[0];
+
+      if(id && window.location.pathname == link) {
+        smoother.scrollTo(`#${id}`, true, 'top top');
+        return false
+      }
+
+      if(id && link) {
+        window.location.href = `${link}?block=${id}`;
+        return false
+      }
+
+      if(!id) {
+        window.location.href = link;
+        return false
+      }
     });
   });
 
-  // to view navigate to -  https://cdpn.io/pen/debug/XWVvMGr#section3
   window.onload = () => {
+    let urlParams = new URLSearchParams(window.location.search)
+    let queryBlock = urlParams.get('block')
+    let block = document.querySelector('#' + queryBlock);
 
-    let urlHash = window.location.href.split('#')[1];
-
-    let scrollElem = document.querySelector('#' + urlHash);
-
-    if (urlHash && scrollElem) {
+    if(queryBlock && block) {
       gsap.to(smoother, {
-        scrollTop: smoother.offset(scrollElem, 'top top'),
+        scrollTop: smoother.offset(block, 'top top'),
         duration: 1,
         delay: 0.5
       });
     }
-  };
+  }
 
   // Элементы которые меняют высоту страницы при взаимодействии
   const btnMore = document.querySelector('.stack__btn-more')
