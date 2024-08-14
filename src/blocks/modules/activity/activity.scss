@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1%;
-    padding-bottom: 24px;
   }
 
   &__col {
@@ -32,6 +31,16 @@
   &__title {
     margin: 0 0 16px;
     font-size: 24px;
+  }
+
+  &__desc {
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__img {
