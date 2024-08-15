@@ -119,15 +119,13 @@
 @include for-size(tablet) {
   .case-detail {
     &__content {
-      order: 2;
       width: 100%;
+      margin-bottom: 24px;
       padding-right: 0;
     }
 
     &__sidebar {
-      order: 1;
       width: 100%;
-      margin-bottom: 24px;
     }
   }
 }

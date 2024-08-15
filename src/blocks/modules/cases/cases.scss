@@ -61,6 +61,12 @@
     }
   }
 
+  &__item-btn {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
   &__item-right {
     display: flex;
     flex-flow: column;
