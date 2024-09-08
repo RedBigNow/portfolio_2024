@@ -6,7 +6,7 @@
     flex-flow: column;
     justify-content: center;
     position: relative;
-    min-height: calc(100vh - 100px);
+    padding: 200px 0 250px;
   }
 
   &__subtitle {
@@ -43,15 +43,6 @@
   }
 }
 
-@media screen and (min-width: 2000px) {
-  .hero {
-    &__wrapper {
-      min-height: auto;
-      padding: 200px 0 300px;
-    }
-  }
-}
-
 @media screen and (max-width: 1440px) {
   .hero {
     &__img {
@@ -63,7 +54,8 @@
 @include for-size(tablet) {
   .hero {
     &__wrapper {
-      min-height: 75vh;
+      min-height: auto;
+      padding: 60px 0;
     }
 
     &__subtitle {
@@ -75,7 +67,7 @@
     }
 
     &__img {
-      width: 400px;
+      width: 300px;
     }
   }
 }
@@ -83,11 +75,12 @@
 @include for-size(phone) {
   .hero {
     &__subtitle {
-      font-size: 16px;
+      font-size: 12px;
     }
 
     &__title {
-      font-size: 24px;
+      margin: 12px 0 16px;
+      font-size: 20px;
       word-break: break-word;
     }
 
@@ -96,8 +89,9 @@
     }
 
     &__img {
-      right: -65%;
-      width: 400px;
+      top: 25%;
+      right: -35%;
+      width: 240px;
       opacity: 0.5;
     }
   }

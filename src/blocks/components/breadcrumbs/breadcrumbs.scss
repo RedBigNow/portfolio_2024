@@ -52,8 +52,8 @@
 
 @include for-size(tablet) {
   .breadcrumbs {
-    &__wrapper {
-      display: none;
+    li {
+      font-size: 10px;
     }
   }
 }

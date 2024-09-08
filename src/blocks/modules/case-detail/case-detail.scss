@@ -63,6 +63,8 @@
   }
 
   &__sidebar {
+    position: sticky;
+    top: 120px;
     width: 33%;
     padding: 32px;
     border-radius: 10px;
@@ -125,14 +127,17 @@
     }
 
     &__sidebar {
+      position: relative;
+      top: 0;
       width: 100%;
+      padding: 24px;
     }
   }
 }
 
 @include for-size(phone) {
   .case-detail {
-    padding-top: 60px;
+    padding-top: 40px;
 
     &__banner {
       padding: 12px;
@@ -141,6 +146,7 @@
     &__img {
       width: 100%;
       height: auto;
+      max-height: 280px;
 
       img {
         width: 100%;
@@ -155,7 +161,17 @@
     }
 
     &__block {
-      padding-top: 40px;
+      padding-top: 60px;
+    }
+
+    &__block-desc {
+      li {
+        font-size: 16px;
+      }
+    }
+
+    &__sidebar-btn {
+      margin-top: 42px;
     }
   }
 }

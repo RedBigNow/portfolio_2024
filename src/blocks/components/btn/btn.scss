@@ -97,6 +97,8 @@ button[disabled] {
   .btn {
     display: block;
     width: 100%;
+    padding: 18px 32px 16px;
+    font-size: 12px;
 
     &--white {
       &:hover {
@@ -106,6 +108,18 @@ button[disabled] {
 
         i {
           background-color: var(--black);
+        }
+      }
+    }
+
+    &--white-outline {
+      &:hover {
+        color: var(--white);
+        background-color: transparent;
+        border: 1px solid var(--white);
+
+        i {
+          background-color: var(--white);
         }
       }
     }
@@ -121,5 +135,9 @@ button[disabled] {
         }
       }
     }
+  }
+
+  a.btn {
+    width: 100%;
   }
 }

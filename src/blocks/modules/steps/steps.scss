@@ -28,12 +28,13 @@
 
 @include for-size(tablet) {
   .steps {
-    padding: 100px 0;
+    padding: 60px 0;
 
     &__item {
       width: 100%;
       min-height: auto;
-      margin: 0 0 24px;
+      margin: 0 0 16px;
+      padding: 24px;
     }
 
     &__item-title {

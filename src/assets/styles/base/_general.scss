@@ -5,6 +5,12 @@ html {
   background-color: var(--black);
 }
 
+@include for-size(tablet) {
+  html {
+    font-size: 16px;
+  }
+}
+
 body {
   height: 100%;
   font-family: var(--font-family);
@@ -167,8 +173,7 @@ h6 {
 
 @include for-size(phone) {
   .section-title {
-    margin: 0 0 18px;
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -207,7 +212,7 @@ img {
 
 .container {
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 16px;
   width: 100%;
   max-width: 1300px;
 }
@@ -219,13 +224,19 @@ section {
 
 @include for-size(tablet) {
   section {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
   }
 }
 
 .content-page {
   flex: 1 0 auto;
   padding-top: 120px;
+}
+
+@include for-size(tablet) {
+  .content-page {
+    padding-top: 110px;
+  }
 }
 
 .content {
@@ -322,6 +333,13 @@ section {
 
   > *:last-child {
     margin-bottom: 0;
+  }
+}
+
+@include for-size(tablet) {
+  .gray-fill {
+    margin: 16px 0;
+    padding: 24px;
   }
 }
 

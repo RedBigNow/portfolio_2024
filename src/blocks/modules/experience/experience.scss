@@ -93,9 +93,31 @@
 
 @include for-size(phone) {
   .experience {
+    &__col {
+      margin: 0 0 16px;
+    }
+
+    &__info {
+      margin-top: 16px;
+      padding: 24px;
+    }
+
+    &__dates {
+      font-size: 10px;
+    }
+
+    &__company {
+      font-size: 12px;
+    }
+
+    &__position {
+      font-size: 12px;
+    }
+
     &__bg {
-      right: -65%;
-      bottom: -350px;
+      display: none;
+      //right: -65%;
+      //bottom: -350px;
     }
   }
 }

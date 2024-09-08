@@ -1,3 +1,4 @@
+/*
 import { gsap } from '../../../assets/js/libs/gsap/gsap.min.js'
 import { ScrollTrigger } from '../../../assets/js/libs/gsap/ScrollTrigger.min.js'
 import { ScrollSmoother } from '../../../assets/js/libs/gsap/ScrollSmoother.min.js'
@@ -28,3 +29,4 @@ mm.add('(min-width: 1200px)', () => {
     })
   }
 })
+*/
