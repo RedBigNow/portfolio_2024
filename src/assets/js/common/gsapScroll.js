@@ -11,7 +11,7 @@ mm.add('(min-width: 1200px)', () => {
   const smoother = ScrollSmoother.create({
     wrapper: '.wrapper',
     content: '.content',
-    smooth: 1.2
+    smooth: 1
   });
 
   gsap.utils.toArray('.header__menu-link').forEach(function (button, i) {
@@ -52,11 +52,13 @@ mm.add('(min-width: 1200px)', () => {
   }
 
   // Элементы которые меняют высоту страницы при взаимодействии
-  const btnMore = document.querySelector('.stack__btn-more')
+  const btnMoreList = document.querySelectorAll('.js-more-btn')
 
-  if(btnMore) {
-    btnMore.addEventListener('click', () => {
-      ScrollTrigger.refresh()
+  if(btnMoreList) {
+    btnMoreList.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        ScrollTrigger.refresh()
+      })
     })
   }
 

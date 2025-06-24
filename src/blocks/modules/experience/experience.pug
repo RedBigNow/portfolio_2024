@@ -3,28 +3,65 @@ section.experience
     .experience__wrapper
       h2.section-title Опыт работы
       .experience__row 
-        .experience__col
-          .experience__info
-            p Я опытный продуктовый дизайнер, который ориентируется на достижение бизнес-результатов<br>и улучшение пользовательского опыта. В своей работе я уделяю особое внимание пониманию потребностей пользователей, чтобы создавать продукты, которые решают реальные задачи и приносят пользу.
-            p Моя цель — не только сделать интерфейс удобным<br>и красивым, но и повысить ключевые показатели бизнеса через продуманный дизайн.
-            p Коммуникабельный, активно участвую в планировании<br>и развитии продукта, анализирую данные и тестирую гипотезы, чтобы вместе с командой добиваться наилучших результатов.
+        .experience__col.experience__col
+          .experience__info.experience__info--animated
+            p Я - frontend разработчик, специализирующийся на создании сложных клиентских веб-приложений. Мой основной стек — Vue/Nuxt, но также имею опыт работы с Express.js + PostgreSQL для создания полноценных fullstack решений. Помимо работы с современными фреймворками, могу создать легковесный проект на чистом JS, собранный через Gulp + Webpack, для последующей интеграции с любой CMS.
+            p Имею практический опыт развертывания проектов через Docker Compose. Пишу unit-тесты на Jest/Vitest для обеспечения надежности кода. Работал с различными UI-библиотеками: Vuetify, Bootstrap и Tailwind/SCSS.
+            p Предпочитаю frontend, но понимаю полный цикл разработки. Пишу чистый, поддерживаемый код и быстро адаптируюсь к новым технологиям.
             .experience__bg
               img(src="../assets/img/binary-2.png", alt="binary img")
         .experience__col
-          .experience__info
-            .experience__dates 2020 - н.в.
-            .experience__company ООО «Моризо Диджитал» 
-            .experience__position UX/UI дизайнер
-            p <b>Ключевые достижения на проектах:</b>
+          .experience__info.experience__info--animated
+            .experience__dates 2022 - н.в.
+            .experience__company Агентство «AlliedM»
+            .experience__position Frontend разработчик
+            p <b>Ключевые задачи:</b>
             ul 
-              li С нуля до релиза довел приложение для сканеров по формированию отгрузок с производства;
-              li Спроектировал интерфейс приложение под IPad для министерства РФ;
-              li Проектирование и дизайн интерфейса внутреннего стартапа включающего в себя web-редактор и мобильное приложение;
-              li Участие на проекте личного кабинета для акционерного регистратора как UX/UI дизайнер и аналитик.
-          .experience__info
-            .experience__dates 2019 - 2020
+              li Разработка SPA и SSR-приложений на Vue.js и Nuxt.js;
+              li Разработка REST API на Express.js и интеграции с различными API сервисами, такими как DaData, Unisender, MGC Loyalty и т.д.;
+              li Верстка сайтов с использованием Vanilla JS в связке Gulp + Webpack;
+              li Рефакторинг legacy-кода, внедрение unit-тестов и TypeScript;
+          .experience__info.experience__info--animated
+            .experience__dates 2021 - 2022
+            .experience__company Агентство «Alente»
+            .experience__position Frontend разработчик
+            p <b>Ключевые задачи:</b>
+            ul
+              li Разработка интернет-магазина на Nuxt.js, который включает: каталог с фильтрами, корзину, оформление заказа, личный кабинет и прочие составляющие E-commerce проекта;
+              li Доработки проектов на Vue, рефакторинг legacy-кода;
+              li Поиск и устранение багов, ручное тестирование;
+        .experience__col.hide
+          .experience__info 
+            .experience__dates 2020 - 2021
             .experience__company Фриланс
-            .experience__position UX/UI дизайнер
-            p <b>Ключевые достижения на проектах:</b>
+            .experience__position Fullstack разработчик
+            p <b>Ключевые задачи:</b>
             ul 
-              li Проектирование и дизайн пользовательского интерфейса (интернет-магазины, корпоративные сайты, сайты студий) для малого и среднего бизнеса.
+              li Верстка сайтов с использованием Vanilla JS в связке Gulp + Webpack;
+              li Интеграция верстки с различными CMS, такими как WordPress, Bitrix, Modx Revo;
+              li Участие в разработке новых и сопровождении старых проектов совместно с предыдущими работодателями;
+              li Разработка простых пользовательских интерфейсов, где не требуется большой опыт в UX/UI;
+        .experience__col.hide
+          .experience__info 
+            .experience__dates 2019 - 2020
+            .experience__company Агентство «Малевич»
+            .experience__position Fullstack разработчик
+            p <b>Ключевые задачи:</b>
+            ul 
+              li Верстка сайтов с использованием Vanilla JS в связке Gulp + Webpack;
+              li Интеграция верстки с различными CMS, такими как WordPress, Bitrix, Modx Revo;
+              li Разработка простых пользовательских интерфейсов, где не требуется большой опыт в UX/UI;
+              li Контентное сопровождение сайтов, функциональные доработки (новые модули, интеграции, исправление багов).
+        .experience__col.hide
+          .experience__info 
+            .experience__dates 2018 - 2019
+            .experience__company Агентство «AlliedM»
+            .experience__position Web-разработчик (Стажер)
+            p <b>Ключевые задачи:</b>
+            ul 
+              li Изучение JS и PHP а так же их практическое применение в коммерческих проектах;
+              li Верстка сайтов с использованием Vanilla JS и jQuery;
+              li Интеграция верстки с различными CMS, такими как WordPress, Bitrix;
+              li Контентное сопровождение сайтов, функциональные доработки (новые модули, интеграции, исправление багов).
+      .experience__btn-wrapper
+        button.btn.btn--white.experience__btn-more.js-more-btn Посмотреть все <i class="icon-right icon-arrow-down"></i>

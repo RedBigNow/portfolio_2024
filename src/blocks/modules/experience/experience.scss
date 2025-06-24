@@ -9,7 +9,7 @@
     display: flex;
     flex-flow: column;
     width: 48%;
-    margin: 0 1%;
+    margin: 0 1% 30px;
   }
 
   &__info {
@@ -39,8 +39,8 @@
   &__bg {
     position: absolute;
     z-index: -1;
-    right: -40%;
-    bottom: -75%;
+    right: -50%;
+    bottom: -60%;
     width: 850px;
 
     img {
@@ -68,6 +68,19 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #b9b9ba;
+  }
+
+  &__btn-wrapper {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  &__btn-more {
+    &--active {
+      i {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 

@@ -10,7 +10,7 @@ let mm = gsap.matchMedia()
 mm.add('(min-width: 1200px)', () => {
   if(bgAnimate) {
     bgAnimate.forEach((item) => {
-      gsap.fromTo(item, { opacity: 0, yPercent: 30},
+      gsap.fromTo(item, { opacity: 0, yPercent: 60},
         {
           opacity: 1,
           yPercent: 0,

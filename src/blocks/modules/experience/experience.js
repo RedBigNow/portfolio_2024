@@ -3,7 +3,7 @@ import { ScrollTrigger } from '../../../assets/js/libs/gsap/ScrollTrigger.min.js
 import { ScrollSmoother } from '../../../assets/js/libs/gsap/ScrollSmoother.min.js'
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
-const ItemsAnimate = document.querySelectorAll('.experience__info')
+const ItemsAnimate = document.querySelectorAll('.experience__info--animated')
 
 let mm = gsap.matchMedia()
 
@@ -29,15 +29,15 @@ mm.add('(min-width: 1200px)', () => {
           }
         })
 
-        gsap.fromTo('.experience__bg', { opacity: 0, scale: 0.5 }, {
+        gsap.fromTo('.experience__bg', { opacity: 0, scale: 0.1 }, {
           opacity: 1,
           scale: 1,
           force3D: false,
           scrollTrigger: {
-            trigger: item.parentNode,
+            trigger: item.parentNode.parentNode,
             pin: false,
             start: 'top +=80%',
-            end: 'bottom +=60%',
+            end: 'top -100px',
             scrub: 1,
             //markers: true
           }
@@ -46,3 +46,30 @@ mm.add('(min-width: 1200px)', () => {
     })  
   }
 })
+
+const experienceList = document.querySelectorAll('.experience__col')
+const btnMore = document.querySelector('.experience__btn-more')
+
+if(btnMore) {
+  btnMore.addEventListener('click', () => {
+    if(btnMore.classList.contains('experience__btn-more--active')) {
+      for(let i = 0; i < experienceList.length; i++) {
+        if(i > 1) {
+          experienceList[i].classList.add('hide')
+        }
+      }
+      btnMore.classList.remove('experience__btn-more--active')
+      btnMore.innerHTML = 'Посмотреть все <i class="icon-right icon-arrow-down"></i>'
+  
+      return false
+    }
+  
+    for(let i = 0; i < experienceList.length; i++) {
+      experienceList[i].classList.remove('hide')
+    }
+  
+    btnMore.classList.add('experience__btn-more--active')
+    btnMore.innerHTML = 'Скрыть <i class="icon-right icon-arrow-down"></i>'
+  
+  })
+}

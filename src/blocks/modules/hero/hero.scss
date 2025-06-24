@@ -43,6 +43,16 @@
   }
 }
 
+@media screen and (min-width: 3000px) {
+  .hero {
+    .gsap-fade-out-marker {
+      position: absolute;
+      bottom: -50vh;
+      left: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 2000px) {
   .hero {
     &__wrapper {
