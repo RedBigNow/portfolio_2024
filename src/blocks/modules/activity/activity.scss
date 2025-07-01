@@ -43,6 +43,19 @@
     *:last-child {
       margin-bottom: 0;
     }
+
+    a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--white);
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        color: #b9b9ba;
+        border-bottom: 1px solid #b9b9ba;
+      }
+    }
+    
   }
 
   &__img {
